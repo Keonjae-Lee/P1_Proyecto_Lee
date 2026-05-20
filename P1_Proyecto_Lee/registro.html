@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - EcuaConect</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s" type="image/x-icon">
+</head>
+
+<body style="background-color: #f5f0e8; font-family: Arial, sans-serif;">
+
+    <header>
+        <h1 style="background-color: rgb(231, 156, 51); padding: 1%; color: #ffffff; margin: 0;">EcuaConect</h1>
+        <div style="text-align: center; padding: 20px 0;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s"
+                alt="Logo" width="120" height="120" style="border-radius: 50%;">
+        </div>
+    </header>
+
+    <main style="max-width: 600px; margin: 0 auto; padding: 0 30px 40px;">
+
+        <h2 style="color: #c0622a; border-bottom: 2px solid #c0622a; padding-bottom: 8px;">Registro de Usuario</h2>
+
+        <div style="background-color: white; border-radius: 10px; padding: 30px;">
+            <p style="font-size: 0.8rem; color: #777; margin: 0 0 20px; text-transform: uppercase;">Cree su Cuenta</p>
+
+            <form action="inicioSesion.html" method="get">
+
+                <div style="margin-bottom: 16px;">
+                    <label for="nombres" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 5px;">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres" required
+                        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 16px;">
+                    <label for="apellidos" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 5px;">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required
+                        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 16px;">
+                    <label for="cedula" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 5px;">Cédula:</label>
+                    <input type="password" id="cedula" name="cedula" required maxlength="10"
+                        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 16px;">
+                    <label for="fecha" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 5px;">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha" name="fecha" required
+                        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 16px;">
+                    <label for="nationality" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 5px;">Género:</label>
+                    <select id="nationality" name="nationality" required
+                        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box; background-color: white;">
+                        <option value="">Seleccione una opción</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 16px;">
+                    <label for="email" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 5px;">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required
+                        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <label for="password" style="display: block; font-size: 0.9rem; color: #555; margin-bottom: 5px;">Contraseña:</label>
+                    <input type="password" id="password" name="password" required minlength="8" maxlength="16"
+                        style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; box-sizing: border-box;">
+                </div>
+
+                <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                    <button type="submit" href="inicioSesion.html"
+                        style="flex: 1; padding: 15px; background-color: #c0622a; color: white; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer;">
+                        Registrarse
+                    </button>
+                </div>
+
+                <p style="text-align: center; color: #777; font-size: 0.9rem;">
+                    ¿Ya tienes una cuenta? <a href="inicioSesion.html" style="color: #c0622a; text-decoration: none; font-weight: bold;">Iniciar Sesión</a>
+                </p>
+
+            </form>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 20px 0 70px; color: #aaa; font-size: 0.8rem;">
+        <p>© 2026 EcuaConect. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

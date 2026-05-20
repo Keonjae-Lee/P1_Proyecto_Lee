@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - EcuaConect</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<nav style="background-color: white; padding: 10px 0; display: flex; justify-content: space-around; border-top: 1px solid #ddd; position: fixed; bottom: 0; width: 100%;">
+        <a href="/principal.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-house"></i><br>Home</a>
+        <a href="catalogo.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-list"></i><br>Catálogo</a>
+        <a href="carrito.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-shopping-cart"></i><br>Carrito</a>
+        <a href="perfil.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-user"></i><br>Perfil</a>
+    </nav>
+
+<body style="background-color: #f5f0e8; font-family: Arial, sans-serif;">
+
+    <h1 style="background-color: rgb(231, 156, 51); padding: 1%; color: #ffffff; margin: 0;">EcuaConect</h1>
+
+    <main style="max-width: 600px; margin: 0 auto; padding: 20px 30px 100px;">
+
+        <h2 style="color: #c0622a; border-bottom: 2px solid #c0622a; padding-bottom: 8px;">Mi Carrito</h2>
+
+        <div style="background-color: white; border-radius: 10px; padding: 15px; margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+            <img src="https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg"
+                alt="Poncho Azul" style="width: 70px; height: 70px; border-radius: 8px;">
+            <div style="flex: 1;">
+                <p style="margin: 0; font-weight: bold;">Poncho Azul</p>
+                <p style="margin: 4px 0 0; color: #777; font-size: 0.85rem;">Doña Rosa · Quitumbe</p>
+                <p style="margin: 4px 0 0; color: #c0622a; font-size: 1rem;">$30</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <button style="padding: 4px 10px; border: 1px solid #ddd; border-radius: 6px; background-color: white; cursor: pointer; font-size: 1rem;">−</button>
+                <p>1</p>
+                <button style="padding: 4px 10px; border: 1px solid #ddd; border-radius: 6px; background-color: white; cursor: pointer; font-size: 1rem;">+</button>
+            </div>
+            <a href="#" style="color: #aaa; text-decoration: none; font-size: 1.2rem;">X</a>
+        </div>
+
+        <div style="background-color: white; border-radius: 10px; padding: 15px; margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s"
+                alt="Artesanía" style="width: 70px; height: 70px; border-radius: 8px;">
+            <div style="flex: 1;">
+                <p style="margin: 0; font-weight: bold;">Jarrón de Barro Negro</p>
+                <p style="margin: 4px 0 0; color: #777; font-size: 0.85rem;">Doña Rosa · Quitumbe</p>
+                <p style="margin: 4px 0 0; color: #c0622a; font-size: 1rem;">$45</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <button style="padding: 4px 10px; border: 1px solid #ddd; border-radius: 6px; background-color: white; cursor: pointer; font-size: 1rem;">−</button>
+                <p>1</p>
+                <button style="padding: 4px 10px; border: 1px solid #ddd; border-radius: 6px; background-color: white; cursor: pointer; font-size: 1rem;">+</button>
+            </div>
+            <a href="#" style="color: #aaa; text-decoration: none; font-size: 1.2rem;">X</a>
+        </div>
+
+        <div style="background-color: white; border-radius: 10px; padding: 20px; margin-top: 10px;">
+            <p style="font-size: 0.8rem; color: #777; margin: 0 0 12px; text-transform: uppercase;">Resumen del pedido</p>
+
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <p style="color: #555;">Subtotal</p>
+                <p>$75</p>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <p style="color: #555;">Envío</p>
+                <p style="color: #777;">Por calcular</p>
+            </div>
+            <div style="display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding-top: 12px; margin-top: 8px;">
+                <p style="font-weight: bold;">Total</p>
+                <p style="font-weight: bold; color: #c0622a; font-size: 1.2rem;">$75</p>
+            </div>
+
+            <div style="display: flex; gap: 15px; margin-top: 20px;">
+                <button style="flex: 1; padding: 15px; border: 2px solid #c0622a; background-color: white; border-radius: 10px; font-size: 1rem; cursor: pointer;">
+                    Seguir comprando
+                </button>
+                <button style="flex: 1; padding: 15px; background-color: #c0622a; color: white; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer;">
+                    Pagar ahora
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer style="text-align: center; padding: 10px 0 70px; color: #aaa; font-size: 0.8rem;">
+        <p>© 2026 EcuaConect. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

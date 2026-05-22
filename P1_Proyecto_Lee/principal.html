@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcuaConect</title>
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s" type="image/x-icon">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s"
+        type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<nav style="background-color: white; padding: 10px 0; display: flex; justify-content: space-around; border-top: 1px solid #ddd; position: fixed; bottom: 0; width: 100%;">
-        <a href="principal.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-house"></i><br>Home</a>
-        <a href="catalogo.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-list"></i><br>Catálogo</a>
-        <a href="carrito.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-shopping-cart"></i><br>Carrito</a>
-        <a href="perfil.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i class="fa-solid fa-user"></i><br>Perfil</a>
-    </nav>
+<nav
+    style="background-color: white; padding: 10px 0; display: flex; justify-content: space-around; border-top: 1px solid #ddd; position: fixed; bottom: 0; width: 100%;">
+    <a href="principal.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i
+            class="fa-solid fa-house" title="Home"></i></a>
+    <a href="catalogo.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i
+            class="fa-solid fa-list" title="Catálogo"></i></a>
+    <a href="carrito.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i
+            class="fa-solid fa-shopping-cart" title="Carrito"></i></a>
+    <a href="perfil.html" style="text-decoration: none; color: black; text-align: center; font-size: 0.85rem;"><i
+            class="fa-solid fa-user" title="Perfil"></i></a>
+</nav>
 
 <body style="background-color: #f5f0e8; font-family: Arial, sans-serif;">
 
@@ -22,20 +28,24 @@
 
     <main style="max-width: 600px; margin: 0 auto; padding: 20px 30px 100px;">
 
-        <div style="background-color: white; border-radius: 10px; padding: 25px; margin-bottom: 15px; text-align: center;">
+        <div
+            style="background-color: white; border-radius: 10px; padding: 25px; margin-bottom: 15px; text-align: center;">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s"
                 alt="Logo" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 15px;">
             <p style="margin: 0; font-weight: bold; font-size: 1.3rem;">¡Bienvenido a EcuaConect!</p>
-            <p style="margin: 8px 0 0; color: #777; font-size: 0.9rem;">Descubre artesanías únicas hechas a mano por maestros artesanos del Ecuador.</p>
-            <img src="https://conartesanos.com/wp-content/uploads/2020/07/1-1.jpg" alt="Artesanía" style="width: 100%; height: auto; border-radius: 10px; margin-top: 15px;">
+            <p style="margin: 8px 0 0; color: #777; font-size: 0.9rem;">Descubre artesanías únicas hechas a mano por
+                maestros artesanos del Ecuador.</p>
+            <img src="https://conartesanos.com/wp-content/uploads/2020/07/1-1.jpg" alt="Artesanía"
+                style="width: 100%; height: auto; border-radius: 10px; margin-top: 15px;">
         </div>
 
         <div>
-            <form action="catalogo.html" method="get" style="background-color: rgb(255, 255, 255); border-radius: 30px;">
-            <fieldset style="border-radius: 20px; border: 1px solid rgb(132, 72, 20);">
-            <section>
-                <h3>Categoria</h3>
-                 <input type="checkbox" id="ceramica" name="intereses[]" value="ceramica">
+            <form action="catalogo.html" method="get"
+                style="background-color: rgb(255, 255, 255); border-radius: 30px;">
+                <fieldset style="border-radius: 20px; border: 1px solid rgb(132, 72, 20);">
+                    <section>
+                        <h3>Categoria</h3>
+                        <input type="checkbox" id="ceramica" name="intereses[]" value="ceramica">
                         <label for="ceramica">Ceramica</label><br>
                         <input type="checkbox" id="madera" name="intereses[]" value="madera">
                         <label for="madera">Madera</label><br>
@@ -43,32 +53,33 @@
                         <label for="tejido">Tejido</label><br>
                         <input type="checkbox" id="metal" name="intereses[]" value="metal">
                         <label for="metal">Metal</label><br>
-            </section>
+                    </section>
 
-            <h3>Región</h3>
-            <select id="categoria" name="categoria" style="padding: 8px;; border-radius: 15px;">
-                <option value="">Seleccione una región</option>
-                <option value="norte">Costa</option>
-                <option value="sur">Sierra</option>
-                <option value="este">Oriente</option>
-                <option value="este">Insular</option>
-            </fieldset>
-            </select><br><br>
-            <button type="submit" href="catalogo.html"
-            style=" padding: 10px; background-color: #d4763b; color: white; border-radius: 10px;">
-                Buscar
-        </form>
+                    <h3>Región</h3>
+                    <select id="categoria" name="categoria" style="padding: 8px;; border-radius: 15px;">
+                        <option value="">Seleccione una región</option>
+                        <option value="norte">Costa</option>
+                        <option value="sur">Sierra</option>
+                        <option value="este">Oriente</option>
+                        <option value="este">Insular</option>
+                </fieldset>
+                </select><br><br>
+                <button type="submit" href="catalogo.html"
+                    style=" padding: 10px; background-color: #d4763b; color: white; border-radius: 10px;">
+                    Buscar
+            </form>
         </div><br>
 
         <div style="background-color: white; border-radius: 10px; padding: 20px; margin-bottom: 15px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <p style="font-size: 0.8rem; color: #777; margin: 0; text-transform: uppercase;">Productos Destacados</p>
+                <p style="font-size: 0.8rem; color: #777; margin: 0; text-transform: uppercase;">Productos Destacados
+                </p>
                 <a href="catalogo.html" style="color: #777; text-decoration: none; font-size: 0.85rem;">Ver todos</a>
             </div>
 
             <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
-                <img src="https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg"
-                    alt="Poncho Azul" style="width: 65px; height: 65px; border-radius: 8px; object-fit: cover;">
+                <img src="https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg" alt="Poncho Azul"
+                    style="width: 65px; height: 65px; border-radius: 8px; object-fit: cover;">
                 <div style="flex: 1;">
                     <p style="margin: 0; font-weight: bold; font-size: 0.95rem;">Poncho Azul</p>
                     <p style="margin: 4px 0 0; color: #777; font-size: 0.8rem;">Doña Rosa · Quitumbe</p>
@@ -77,9 +88,10 @@
                 <p style="color: #c0622a; font-weight: bold;">$30</p>
             </div>
 
-            <div style="border-top: 1px solid #ddd; padding-top: 12px; display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
-                <img src="https://huakaldesign.com/cdn/shop/files/1-00737_A.jpg?v=1721044660&width=1920"
-                    alt="Jarrón" style="width: 65px; height: 65px; border-radius: 8px; object-fit: cover;">
+            <div
+                style="border-top: 1px solid #ddd; padding-top: 12px; display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                <img src="https://huakaldesign.com/cdn/shop/files/1-00737_A.jpg?v=1721044660&width=1920" alt="Jarrón"
+                    style="width: 65px; height: 65px; border-radius: 8px; object-fit: cover;">
                 <div style="flex: 1;">
                     <p style="margin: 0; font-weight: bold; font-size: 0.95rem;">Jarrón de Barro</p>
                     <p style="margin: 4px 0 0; color: #777; font-size: 0.8rem;">Doña Rosa · Quitumbe</p>
@@ -100,10 +112,48 @@
             </div>
         </div>
 
+        <h4>Preguntas sobre nosotros</h4>
+        <details>
+            <summary style="max-width: 1100px;  padding: 0 30px 20px; cursor: pointer; font-weight: bold;">
+                Quienes somos?</summary>
+            <div style="max-width: 1100px;  padding: 0 30px 20px;">
+                <p style="margin: 0; color: #777; font-size: 0.9rem;">EcuaConect es una plataforma dedicada a conectar
+                    a los amantes de las artesanías con los talentosos artesanos del Ecuador. Nuestra misión es
+                    promover y preservar la rica tradición artesanal del país, ofreciendo una experiencia de compra
+                    única y auténtica.</p>
+                </summary>
+            </div>
+        </details>
+
+        <details>
+            <summary style="max-width: 1100px;  padding: 0 30px 20px; cursor: pointer; font-weight: bold;">
+                Como comprar?</summary>
+            <div style="max-width: 1100px;  padding: 0 30px 20px;">
+                <p style="margin: 0; color: #777; font-size: 0.9rem;">Para comprar en EcuaConect, simplemente navega por
+                    nuestro catálogo de productos, selecciona los artículos que te interesen y añádelos a tu carrito
+                    de compras. Luego, sigue el proceso de pago seguro para completar tu compra. ¡Es fácil y
+                    conveniente!</p>
+                </summary> <br>
+            </div>
+        </details>
+
+        <details>
+            <summary
+                style="max-width: 1100px; margin: 0 auto; padding: 0 30px 20px; cursor: pointer; font-weight: bold;">
+                Como vender?</summary>
+            <div style="max-width: 1100px; margin: 0 auto; padding: 0 30px 20px;">
+                <p style="margin: 0; color: #777; font-size: 0.9rem;">Si eres un artesano interesado en vender tus
+                    productos en EcuaConect, puedes registrarte como vendedor en nuestra plataforma. Simplemente
+                    completa el formulario de registro, proporciona la información requerida y comienza a subir tus
+                    productos para que los clientes puedan descubrir y comprar tus creaciones.</p>
+                </summary>
+            </div>
+        </details>
+
     </main>
 
     <footer style="text-align: center; padding: 10px 0 70px; color: #aaa; font-size: 0.8rem;">
-        <p>© 2026 EcuaConect. Todos los derechos reservados.</p>
+        <i class="fa-solid fa-copyright"></i><p> 2026 EcuaConect. Todos los derechos reservados.</p>
     </footer>
 
 </body>

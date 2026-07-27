@@ -1,0 +1,125 @@
+/*
+======================================
+catalogo.css
+Estilos exclusivos para catalogo.html
+======================================
+*/
+
+/* ============================================================
+   FILTROS / BADGES de categoría
+   ============================================================ */
+
+.filter-badge {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.active-filter {
+    box-shadow: 0 3px 8px rgba(192, 98, 42, 0.35);
+}
+
+/* ============================================================
+   LISTA CLÁSICA DE PRODUCTOS — Flexbox
+   ============================================================ */
+
+.catalogo-fieldset {
+    border-radius: 12px;
+    border: 1px solid #e0d0c0;
+    padding: 14px;
+    margin-bottom: 12px;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.catalogo-fieldset:hover {
+    box-shadow: 0 3px 10px rgba(192, 98, 42, 0.15);
+    border-color: var(--color-primario);
+}
+
+.catalogo-fieldset > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.catalogo-fieldset img {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid #f0e0d0;
+    transition: transform 0.2s ease;
+}
+
+.catalogo-fieldset:hover img {
+    transform: scale(1.05);
+}
+
+.catalogo-fieldset .info {
+    flex: 1;
+}
+
+.catalogo-fieldset .info .nombre {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.catalogo-fieldset .info .vendedor {
+    margin: 3px 0 0;
+    color: var(--color-texto-suave);
+    font-size: 0.8rem;
+}
+
+.catalogo-fieldset .info .calificacion {
+    margin: 3px 0 0;
+    color: var(--color-texto-muy-suave);
+    font-size: 0.75rem;
+}
+
+.catalogo-fieldset .precio-col {
+    text-align: right;
+    flex-shrink: 0;
+    max-width: 160px;
+}
+
+.catalogo-fieldset .precio-col .btn-editar-producto,
+.catalogo-fieldset .precio-col .btn-eliminar-producto {
+    font-size: 0.75rem;
+}
+
+.catalogo-fieldset .precio-col p {
+    margin: 0;
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.catalogo-fieldset .precio-col a {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-size: 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.catalogo-fieldset .precio-col a:hover {
+    text-decoration: underline;
+    color: var(--color-primario-oscuro);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (min-width: 768px) {
+    .catalogo-fieldset img {
+        width: 80px;
+        height: 80px;
+    }
+}

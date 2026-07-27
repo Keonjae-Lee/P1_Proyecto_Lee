@@ -1,0 +1,326 @@
+/*
+======================================
+producto.css
+Estilos exclusivos para producto.html
+======================================
+*/
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   LAYOUT PRINCIPAL
+   Mobile-first: columna → fila en desktop
+   ============================================================ */
+
+.producto-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .producto-main {
+        max-width: 900px;
+        padding: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    .producto-main {
+        flex-direction: row;
+        gap: 40px;
+        max-width: 1100px;
+        padding: 30px;
+        align-items: flex-start;
+    }
+
+    .producto-imagen {
+        flex: 1;
+        position: sticky;
+        top: 70px;
+    }
+
+    .producto-detalle {
+        flex: 1;
+    }
+}
+
+/* ============================================================
+   IMAGEN DEL PRODUCTO
+   ============================================================ */
+
+.producto-imagen img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+}
+
+.producto-imagen img:hover {
+    transform: scale(1.02);
+}
+
+/* ============================================================
+   DETALLE DEL PRODUCTO
+   ============================================================ */
+
+.producto-detalle h1 {
+    font-size: 1.6rem;
+    margin: 0 0 6px;
+    color: #222;
+}
+
+@media (min-width: 992px) {
+    .producto-detalle h1 {
+        font-size: 2rem;
+    }
+}
+
+.producto-detalle .calificacion {
+    color: var(--color-primario);
+    margin: 0 0 10px;
+    font-size: 1rem;
+}
+
+.producto-detalle .precio {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #222;
+    margin: 10px 0 14px;
+}
+
+/* ============================================================
+   PROCESO DE FABRICACIÓN
+   ============================================================ */
+
+.proceso-card {
+    background-color: #fdf6ee;
+    border-radius: var(--radio-borde);
+    padding: 16px;
+    margin-bottom: 18px;
+    border-left: 4px solid var(--color-primario);
+}
+
+.proceso-card .proceso-label {
+    font-size: 0.72rem;
+    color: var(--color-primario);
+    margin: 0 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.proceso-card p:last-child {
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* ============================================================
+   BOTONES DE ACCIÓN
+   ============================================================ */
+
+.producto-acciones {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-agregar-carrito {
+    flex: 1;
+    min-width: 140px;
+    padding: 14px 10px;
+    border: 2px solid var(--color-primario);
+    background-color: white;
+    border-radius: var(--radio-borde);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--color-primario);
+    transition: background-color var(--transicion), color var(--transicion), transform var(--transicion);
+}
+
+.btn-agregar-carrito:hover {
+    background-color: var(--color-primario);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-comprar-ahora {
+    flex: 1;
+    min-width: 140px;
+    padding: 14px 10px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: var(--radio-borde);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transicion), transform var(--transicion), box-shadow var(--transicion);
+}
+
+.btn-comprar-ahora:hover {
+    background-color: var(--color-primario-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(192, 98, 42, 0.35);
+}
+
+/* ============================================================
+   TARJETA DEL VENDEDOR
+   ============================================================ */
+
+.vendedor-card {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid #f0e0d0;
+}
+
+.vendedor-card img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-secundario);
+    flex-shrink: 0;
+}
+
+.vendedor-card .info {
+    flex: 1;
+}
+
+.vendedor-card .info .nombre {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.vendedor-card .info .ubicacion {
+    margin: 2px 0 0;
+    color: var(--color-texto-suave);
+    font-size: 0.82rem;
+}
+
+.vendedor-card .info .rol {
+    margin: 2px 0 0;
+    color: var(--color-texto-muy-suave);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.btn-tienda {
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    border: 1px solid var(--color-primario);
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: background-color var(--transicion), color var(--transicion);
+    flex-shrink: 0;
+}
+
+.btn-tienda:hover {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+/* ============================================================
+   RESEÑAS
+   ============================================================ */
+
+.resenas-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 16px 20px;
+}
+
+@media (min-width: 992px) {
+    .resenas-section {
+        max-width: 1100px;
+        padding: 0 30px 30px;
+    }
+}
+
+.resenas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 16px;
+}
+
+.resenas-header h2 {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.resenas-header a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color var(--transicion);
+}
+
+.resenas-header a:hover {
+    color: var(--color-primario-oscuro);
+    text-decoration: underline;
+}
+
+.resena-item {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    box-shadow: var(--sombra-card);
+}
+
+.resena-item p.texto {
+    margin: 0;
+    color: #515151;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.resena-item p.autor {
+    color: var(--color-texto-muy-suave);
+    font-size: 0.82rem;
+}
+
+.resena-summary {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    padding: 14px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--color-primario);
+    margin-bottom: 8px;
+    display: block;
+    transition: background-color var(--transicion);
+}
+
+.resena-summary:hover {
+    background-color: #fdf0e3;
+}

@@ -1,0 +1,252 @@
+/*
+======================================
+perfil.css
+Estilos exclusivos para perfil.html
+======================================
+*/
+
+/* ============================================================
+   TARJETA DE USUARIO
+   ============================================================ */
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.perfil-usuario img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-secundario);
+    box-shadow: 0 3px 8px rgba(231, 156, 51, 0.3);
+    flex-shrink: 0;
+}
+
+.perfil-usuario .nombre {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.perfil-usuario .email {
+    margin: 4px 0 0;
+    color: var(--color-texto-suave);
+    font-size: 0.85rem;
+}
+
+.perfil-usuario .miembro {
+    margin: 6px 0 0;
+}
+
+/* ============================================================
+   DATOS PERSONALES
+   ============================================================ */
+
+.datos-personales .campo-dato {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+}
+
+.datos-personales .campo-dato + .campo-dato {
+    border-top: 1px solid #f0e8e0;
+    padding-top: 12px;
+}
+
+.datos-personales .campo-dato .etiqueta {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--color-texto-muy-suave);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-weight: bold;
+}
+
+.datos-personales .campo-dato .valor {
+    margin: 4px 0 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+progress,
+meter {
+    accent-color: var(--color-primario);
+    width: 70%;
+    height: 8px;
+}
+
+/* ============================================================
+   MIS PEDIDOS
+   ============================================================ */
+
+.mis-pedidos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.mis-pedidos-header p {
+    font-size: 0.75rem;
+    color: var(--color-texto-suave);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.mis-pedidos-header a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color var(--transicion);
+}
+
+.mis-pedidos-header a:hover {
+    color: var(--color-primario-oscuro);
+}
+
+.pedido-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+}
+
+.pedido-item + .pedido-item {
+    border-top: 1px solid #f0e8e0;
+}
+
+.pedido-item img {
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.pedido-item:hover img {
+    transform: scale(1.05);
+}
+
+.pedido-item .info {
+    flex: 1;
+}
+
+.pedido-item .info .nombre {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.pedido-item .info .fecha {
+    margin: 3px 0 0;
+    color: var(--color-texto-muy-suave);
+    font-size: 0.8rem;
+}
+
+.pedido-item .precio {
+    color: var(--color-primario);
+    font-weight: bold;
+    margin: 0 0 4px;
+    font-size: 0.95rem;
+}
+
+/* ============================================================
+   TABLA DE COMPRAS — Bootstrap table personalizada
+   ============================================================ */
+
+.tabla-compras {
+    padding: 15px;
+}
+
+.tabla-compras .tabla-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.tabla-compras thead th {
+    background-color: var(--color-primario);
+    color: white;
+    font-size: 0.85rem;
+    border: none;
+    font-weight: bold;
+}
+
+.tabla-compras tbody tr:hover {
+    background-color: rgba(192, 98, 42, 0.05);
+}
+
+/* ============================================================
+   ACCIONES DEL PERFIL
+   ============================================================ */
+
+.perfil-acciones {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-editar-perfil {
+    flex: 1;
+    padding: 14px 10px;
+    border: 2px solid var(--color-primario);
+    background-color: white;
+    border-radius: var(--radio-borde);
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--color-primario);
+    transition: background-color var(--transicion), color var(--transicion), transform var(--transicion);
+}
+
+.btn-editar-perfil:hover {
+    background-color: var(--color-primario);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-cerrar-sesion {
+    flex: 1;
+    padding: 14px 10px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: var(--radio-borde);
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transicion), transform var(--transicion), box-shadow var(--transicion);
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: var(--color-primario-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(192, 98, 42, 0.35);
+    color: white;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (min-width: 768px) {
+    .perfil-usuario img {
+        width: 90px;
+        height: 90px;
+    }
+
+    progress, meter {
+        width: 60%;
+    }
+}

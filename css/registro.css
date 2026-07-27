@@ -1,0 +1,176 @@
+/*
+======================================
+registro.css
+Estilos exclusivos para registro.html
+======================================
+*/
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.auth-header {
+    text-align: center;
+}
+
+.header-logo {
+    text-align: center;
+    padding: 16px 0 8px;
+}
+
+.header-logo img {
+    border-radius: 50%;
+    border: 3px solid var(--color-secundario);
+    box-shadow: 0 4px 12px rgba(231, 156, 51, 0.3);
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.registro-main {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+}
+
+.registro-main h2 {
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 8px;
+    margin: 16px 0 12px;
+    font-size: 1.4rem;
+}
+
+/* ============================================================
+   TARJETA DE REGISTRO
+   ============================================================ */
+
+.registro-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.registro-card .subtitulo {
+    font-size: 0.75rem;
+    color: var(--color-texto-suave);
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+/* ============================================================
+   CAMPOS DEL FORMULARIO
+   ============================================================ */
+
+.campo {
+    margin-bottom: 14px;
+}
+
+.campo label {
+    display: block;
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e0c8aa;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: border-color var(--transicion), box-shadow var(--transicion);
+    background-color: white;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(192, 98, 42, 0.15);
+    outline: none;
+}
+
+.campo-password {
+    margin-bottom: 8px;
+}
+
+.hint-text {
+    color: var(--color-texto-suave);
+    font-size: 0.72rem;
+    margin: 4px 0 0;
+}
+
+/* ============================================================
+   BOTONES
+   ============================================================ */
+
+.registro-acciones {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.btn-registrar {
+    flex: 1;
+    padding: 14px;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    border-radius: var(--radio-borde);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transicion), transform var(--transicion), box-shadow var(--transicion);
+}
+
+.btn-registrar:hover {
+    background-color: var(--color-primario-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(192, 98, 42, 0.35);
+}
+
+.registro-card .link-login {
+    text-align: center;
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.registro-card .link-login a {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color var(--transicion);
+}
+
+.registro-card .link-login a:hover {
+    color: var(--color-primario-oscuro);
+    text-decoration: underline;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.registro-footer {
+    text-align: center;
+    padding: 20px 0 40px;
+    color: var(--color-texto-muy-suave);
+    font-size: 0.8rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (min-width: 768px) {
+    .registro-main {
+        max-width: 540px;
+    }
+}

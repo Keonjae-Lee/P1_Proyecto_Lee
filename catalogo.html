@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - EcuaConect</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-ecuaconect">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand fw-bold fs-4" href="principal.html">
+                <i class="fa-solid fa-leaf me-1"></i> EcuaConect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="principal.html"><i class="fa-solid fa-house me-1"></i> Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="catalogo.html"><i class="fa-solid fa-list me-1"></i> Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carrito.html"><i class="fa-solid fa-shopping-cart me-1"></i> Carrito <span class="badge badge-ecuaconect ms-1 badge-carrito-contador">0</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="perfil.html"><i class="fa-solid fa-user me-1"></i> Perfil</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="bottom-nav d-lg-none">
+        <a href="principal.html"><i class="fa-solid fa-house"></i></a>
+        <a href="catalogo.html" class="activo"><i class="fa-solid fa-list"></i></a>
+        <a href="carrito.html"><i class="fa-solid fa-shopping-cart"></i></a>
+        <a href="perfil.html"><i class="fa-solid fa-user"></i></a>
+    </nav>
+
+    <main class="app-main">
+
+        <h2><i class="fa-solid fa-cart-shopping fa-lg me-2"></i> Catálogo</h2>
+
+        <!-- Aquí se insertan las alertas de Bootstrap generadas por JS -->
+        <div id="contenedorAlertas"></div>
+
+        <!-- Botón agregar producto -->
+        <div class="mb-3">
+            <button class="btn fw-bold" style="background-color:var(--color-primario); color:#fff;" id="btnAgregarProducto" data-bs-toggle="modal" data-bs-target="#modalAgregarProducto">
+                <i class="fa-solid fa-plus me-2"></i> Agregar nuevo producto
+            </button>
+        </div>
+
+        <!-- Filtros con Badges -->
+        <div class="mb-3 d-flex flex-wrap gap-2" id="filtrosCategoria">
+            <span class="badge badge-ecuaconect fs-6 px-3 py-2 filter-badge active-filter" data-categoria="todos">Todos</span>
+            <span class="badge bg-light text-dark border fs-6 px-3 py-2 filter-badge" data-categoria="home-decoration"><i class="fa-solid fa-mug-saucer"></i> Cerámica</span>
+            <span class="badge bg-light text-dark border fs-6 px-3 py-2 filter-badge" data-categoria="womens-dresses"><i class="fa-solid fa-shirt"></i> Tejido</span>
+            <span class="badge bg-light text-dark border fs-6 px-3 py-2 filter-badge" data-categoria="furniture"><i class="fa-solid fa-chair"></i> Madera</span>
+            <span class="badge bg-light text-dark border fs-6 px-3 py-2 filter-badge" data-categoria="mens-watches"><i class="fa-solid fa-clock"></i> Metal</span>
+        </div>
+
+        <!-- Búsqueda y Ordenamiento -->
+        <div class="row mb-3 gap-2">
+            <div class="col-12 col-md-8">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="busquedaProducto" class="form-control" placeholder="Buscar producto por nombre...">
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <select id="ordenamiento" class="form-select">
+                    <option value="relevancia">Ordenar por: Relevancia</option>
+                    <option value="precio-asc"><i class="fa-solid fa-money-bill-1-wave"></i> Menor precio</option>
+                    <option value="precio-desc"><i class="fa-solid fa-money-bill-1-wave"></i> Mayor precio</option>
+                    <option value="calificacion-desc"><i class="fa-solid fa-star"></i>  Mejor calificación</option>
+                    <option value="calificacion-asc"><i class="fa-solid fa-star"></i>  Menor calificación</option>
+                    <option value="nombre-asc"><i class="fa-solid fa-sort-alpha-down"></i> A → Z Nombre</option>
+                    <option value="nombre-desc"><i class="fa-solid fa-sort-alpha-up"></i> Z → A Nombre</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- PRODUCTOS DESTACADOS — Grid Bootstrap -->
+        <div class="card mb-3">
+            <p class="card-subtitulo">Productos Destacados</p>
+
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="card card-producto h-100">
+                        <img src="https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg" class="card-img-top" alt="Poncho Azul">
+                        <div class="card-body p-2 d-flex flex-column">
+                            <h6 class="card-title mb-1 fw-bold">Poncho Azul</h6>
+                            <p class="text-muted small mb-0">Doña Rosa · Otavalo</p>
+                            <p class="text-warning small mb-1">★★★★★ 4.8</p>
+                            <p class="fw-bold mb-2" style="color:var(--color-primario);">$30</p>
+                            <div class="d-flex gap-1 mt-auto">
+                                <a href="producto.html" class="btn btn-sm btn-warning fw-bold flex-fill">Ver más</a>
+                                <button class="btn btn-sm btn-outline-dark btn-agregar-destacado" data-id="destacado-1" data-nombre="Poncho Azul" data-precio="30" data-vendedor="Doña Rosa · Otavalo" data-imagen="https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card card-producto h-100">
+                        <img src="https://www.pimkay.com/wp-content/uploads/2021/08/Colibri-Azul-768x960.jpg" class="card-img-top" alt="Colibrí Azul">
+                        <div class="card-body p-2 d-flex flex-column">
+                            <h6 class="card-title mb-1 fw-bold">Colibrí Azul</h6>
+                            <p class="text-muted small mb-0">Don Carlos · Ibarra</p>
+                            <p class="text-warning small mb-1">★★★★☆ 4.6</p>
+                            <p class="fw-bold mb-2" style="color:var(--color-primario);">$20</p>
+                            <div class="d-flex gap-1 mt-auto">
+                                <a href="producto.html" class="btn btn-sm btn-warning fw-bold flex-fill">Ver más</a>
+                                <button class="btn btn-sm btn-outline-dark btn-agregar-destacado" data-id="destacado-2" data-nombre="Colibrí Azul" data-precio="20" data-vendedor="Don Carlos · Ibarra" data-imagen="https://www.pimkay.com/wp-content/uploads/2021/08/Colibri-Azul-768x960.jpg">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card card-producto h-100">
+                        <img src="https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-a-clay-vase-isolated-on-a-white-background-png-image_10233800.png" class="card-img-top" alt="Jarrón de Barro">
+                        <div class="card-body p-2 d-flex flex-column">
+                            <h6 class="card-title mb-1 fw-bold">Jarrón de Barro</h6>
+                            <p class="text-muted small mb-0">Doña María · Cuenca</p>
+                            <p class="text-warning small mb-1">★★★★★ 4.7</p>
+                            <p class="fw-bold mb-2" style="color:var(--color-primario);">$45</p>
+                            <div class="d-flex gap-1 mt-auto">
+                                <a href="producto.html" class="btn btn-sm btn-warning fw-bold flex-fill">Ver más</a>
+                                <button class="btn btn-sm btn-outline-dark btn-agregar-destacado" data-id="destacado-3" data-nombre="Jarrón de Barro" data-precio="45" data-vendedor="Doña María · Cuenca" data-imagen="https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-a-clay-vase-isolated-on-a-white-background-png-image_10233800.png">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card card-producto h-100">
+                        <img src="https://i.etsystatic.com/25364145/r/il/f0ce29/7382434569/il_570xN.7382434569_4dxt.jpg" class="card-img-top" alt="Manta Tejida">
+                        <div class="card-body p-2 d-flex flex-column">
+                            <h6 class="card-title mb-1 fw-bold">Manta Tejida</h6>
+                            <p class="text-muted small mb-0">Don Carlos · Otavalo</p>
+                            <p class="text-warning small mb-1">★★★★★ 4.9</p>
+                            <p class="fw-bold mb-2" style="color:var(--color-primario);">$25</p>
+                            <div class="d-flex gap-1 mt-auto">
+                                <a href="producto.html" class="btn btn-sm btn-warning fw-bold flex-fill">Ver más</a>
+                                <button class="btn btn-sm btn-outline-dark btn-agregar-destacado" data-id="destacado-4" data-nombre="Manta Tejida" data-precio="25" data-vendedor="Don Carlos · Otavalo" data-imagen="https://i.etsystatic.com/25364145/r/il/f0ce29/7382434569/il_570xN.7382434569_4dxt.jpg">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TODOS LOS PRODUCTOS — Lista Flexbox (cargada dinámicamente con JS + API) -->
+        <div class="card mb-3">
+            <p class="card-subtitulo">
+                Todos los Productos
+                <span class="badge bg-light text-dark border small ms-2" id="contadorProductos"></span>
+            </p>
+
+            <!-- Mensaje de carga -->
+            <p id="estadoCarga" class="text-center text-muted my-3">
+                <i class="fa-solid fa-spinner fa-spin me-1"></i> Cargando productos...
+            </p>
+
+            <!-- Mensaje de error -->
+            <div id="estadoError" class="alert alert-danger d-none" role="alert"></div>
+
+            <!-- Aquí se insertan los .catalogo-fieldset generados por catalogo.js -->
+            <div id="listaProductos"></div>
+        </div>
+
+        <!-- PAGINACIÓN Bootstrap -->
+        <nav aria-label="Paginación del catálogo">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
+                <li class="page-item active"><a class="page-link" href="#" style="background-color:var(--color-primario); border-color:var(--color-primario);">1</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="color:var(--color-primario);">2</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="color:var(--color-primario);">3</a></li>
+                <li class="page-item"><a class="page-link" href="#" style="color:var(--color-primario);">&raquo;</a></li>
+            </ul>
+        </nav>
+
+    </main>
+
+    <!-- Modal agregar producto -->
+    <div class="modal fade" id="modalAgregarProducto" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius:16px;">
+                <div class="modal-header" style="background-color:var(--color-primario); border-radius:16px 16px 0 0;">
+                    <h5 class="modal-title text-white fw-bold"><i class="fa-solid fa-plus me-2"></i> Agregar producto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAgregarProducto">
+                        <div class="mb-3">
+                            <label for="nombreProducto" class="form-label fw-bold small">Nombre del producto</label>
+                            <input type="text" class="form-control" id="nombreProducto" placeholder="Ej. Poncho rojo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcionProducto" class="form-label fw-bold small">Descripción</label>
+                            <textarea class="form-control" id="descripcionProducto" rows="3" placeholder="Describe tu producto..." required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="categoriaProducto" class="form-label fw-bold small">Categoría</label>
+                            <select class="form-select" id="categoriaProducto" required>
+                                <option value="">Selecciona una categoría</option>
+                                <option value="ceramica"> <i class="fa-solid fa-mug-saucer"></i> Cerámica</option>
+                                <option value="tejido"> <i class="fa-solid fa-shirt"></i> Tejido</option>
+                                <option value="madera"> <i class="fa-solid fa-chair"></i> Madera</option>
+                                <option value="metal"> <i class="fa-solid fa-clock"></i> Metal</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="precioProducto" class="form-label fw-bold small">Precio ($)</label>
+                            <input type="number" class="form-control" id="precioProducto" step="0.01" min="0.01" placeholder="Ej. 30.00" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="stockProducto" class="form-label fw-bold small">Stock disponible</label>
+                            <input type="number" class="form-control" id="stockProducto" min="1" placeholder="Ej. 5" value="1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="imagenProducto" class="form-label fw-bold small">URL de imagen</label>
+                            <input type="url" class="form-control" id="imagenProducto" placeholder="https://ejemplo.com/imagen.jpg">
+                            <small class="text-muted">Deja en blanco para una imagen por defecto</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn fw-bold" style="background-color:var(--color-primario); color:#fff;" onclick="document.getElementById('formAgregarProducto').dispatchEvent(new Event('submit'))">
+                        <i class="fa-solid fa-save me-1"></i> Guardar producto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de detalle de producto (datos JSON traídos de la API) -->
+    <div class="modal fade" id="modalDetalleProducto" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style="border-radius:16px;">
+                <div class="modal-header" style="background-color:var(--color-secundario); border-radius:16px 16px 0 0;">
+                    <h5 class="modal-title text-white fw-bold" id="modalDetalleTitulo">
+                        <i class="fa-solid fa-circle-info me-2"></i> Detalle del producto
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalDetalleImagen" src="" alt="" class="img-fluid rounded mb-3" style="max-height:220px; object-fit:cover;">
+                    <p><strong>Descripción:</strong> <span id="modalDetalleDescripcion"></span></p>
+                    <p class="mb-1"><strong>Datos crudos (JSON):</strong></p>
+                    <pre id="modalDetalleJSON" class="bg-light p-2 rounded small" style="white-space:pre-wrap;"></pre>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><i class="fa-solid fa-copyright"></i> 2026 EcuaConect. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/catalogo.js"></script>
+</body>
+
+</html>

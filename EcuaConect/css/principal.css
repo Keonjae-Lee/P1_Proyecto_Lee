@@ -1,0 +1,182 @@
+/*
+======================================
+principal.css
+Estilos exclusivos para principal.html
+======================================
+*/
+
+/* ============================================================
+   CARRUSEL
+   ============================================================ */
+
+.carousel-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .carousel-img {
+        height: 320px;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-img {
+        height: 420px;
+    }
+}
+
+/* ============================================================
+   BIENVENIDA
+   ============================================================ */
+
+.bienvenida {
+    text-align: center;
+    padding: 24px 20px;
+}
+
+.bienvenida .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--color-secundario);
+    box-shadow: 0 4px 12px rgba(231, 156, 51, 0.3);
+}
+
+.bienvenida .titulo-bienvenida {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0;
+}
+
+.bienvenida .subtitulo-bienvenida {
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+    margin: 8px 0 0;
+}
+
+@media (min-width: 768px) {
+    .bienvenida .logo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .bienvenida .titulo-bienvenida {
+        font-size: 1.8rem;
+    }
+}
+
+/* ============================================================
+   FORMULARIO DE BÚSQUEDA
+   ============================================================ */
+
+.form-busqueda {
+    padding: 20px;
+}
+
+.categorias-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.categoria-chip {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 14px;
+    background-color: #fdf0e3;
+    border: 1px solid #e0c8aa;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.categoria-chip:hover {
+    background-color: #f5dfc0;
+    border-color: var(--color-primario);
+}
+
+.categoria-chip input[type="checkbox"] {
+    accent-color: var(--color-primario);
+    width: auto;
+    margin: 0;
+}
+
+/* ============================================================
+   PRODUCTOS DESTACADOS — lista móvil
+   ============================================================ */
+
+.link-ver-todos {
+    color: var(--color-texto-suave);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.link-ver-todos:hover {
+    color: var(--color-primario);
+}
+
+.producto-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.producto-item + .producto-item {
+    border-top: 1px solid var(--color-borde);
+}
+
+.producto-item img {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.producto-item .info {
+    flex: 1;
+}
+
+.producto-item .info .nombre {
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.producto-item .info .vendedor {
+    margin: 2px 0 0;
+    color: var(--color-texto-suave);
+    font-size: 0.8rem;
+}
+
+.producto-item .info .calificacion {
+    margin: 2px 0 0;
+    color: var(--color-texto-muy-suave);
+    font-size: 0.75rem;
+}
+
+.producto-item .precio {
+    color: var(--color-primario);
+    font-weight: bold;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   ACCORDION FAQ — Personalización extra
+   ============================================================ */
+
+.accordion-item {
+    border: 1px solid #e8ddd3 !important;
+}
+
+.accordion-button {
+    font-size: 0.95rem;
+}

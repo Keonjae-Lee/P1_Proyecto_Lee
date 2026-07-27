@@ -1,0 +1,312 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Poncho Azul",
+      "descripcion": "Poncho tejido a mano con lana de oveja, utilizando técnicas ancestrales otavaleñas. Tintes naturales de plantas andinas.",
+      "categoria": "tejido",
+      "precio": 30.00,
+      "calificacion": 4.8,
+      "resenas": 128,
+      "stock": 5,
+      "region": "sierra",
+      "imagen": "https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg",
+      "vendedor_id": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Colibrí Azul",
+      "descripcion": "Figura decorativa de madera tallada a mano, pintada con colores naturales representando el colibrí ecuatoriano.",
+      "categoria": "madera",
+      "precio": 20.00,
+      "calificacion": 4.6,
+      "resenas": 74,
+      "stock": 12,
+      "region": "sierra",
+      "imagen": "https://www.pimkay.com/wp-content/uploads/2021/08/Colibri-Azul-768x960.jpg",
+      "vendedor_id": 2
+    },
+    {
+      "id": 3,
+      "nombre": "Jarrón de Barro Negro",
+      "descripcion": "Jarrón moldeado a mano durante 3 días con técnicas ancestrales. Color negro obtenido mediante cocción especial en hornos de leña.",
+      "categoria": "ceramica",
+      "precio": 45.00,
+      "calificacion": 4.7,
+      "resenas": 96,
+      "stock": 3,
+      "region": "sierra",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLUGeuxsPkE-k4nsj0tQOb0vVFeQlJuc9qJOi1cYM-sQ&s=10",
+      "vendedor_id": 3
+    },
+    {
+      "id": 4,
+      "nombre": "Manta Tejida",
+      "descripcion": "Manta elaborada en telar a mano con diseños geométricos ancestrales. 100% lana de alpaca de alta calidad.",
+      "categoria": "tejido",
+      "precio": 25.00,
+      "calificacion": 4.9,
+      "resenas": 205,
+      "stock": 8,
+      "region": "sierra",
+      "imagen": "https://i.etsystatic.com/25364145/r/il/f0ce29/7382434569/il_570xN.7382434569_4dxt.jpg",
+      "vendedor_id": 2
+    },
+    {
+      "id": 5,
+      "nombre": "Canasta Tejida",
+      "descripcion": "Canasta decorativa tejida con fibras naturales de totora. Perfecta para guardar frutas, flores o como elemento decorativo.",
+      "categoria": "tejido",
+      "precio": 18.00,
+      "calificacion": 4.5,
+      "resenas": 42,
+      "stock": 15,
+      "region": "costa",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzB2Eq3-KYzhEMG0bFLuVZpx87ljTAhwNHfy3V8VF7NA&s=10",
+      "vendedor_id": 1
+    },
+    {
+      "id": 6,
+      "nombre": "Plato de Cerámica",
+      "descripcion": "Plato decorativo de cerámica pintado a mano con diseños tradicionales. Hecho en arcilla local.",
+      "categoria": "ceramica",
+      "precio": 15.00,
+      "calificacion": 4.4,
+      "resenas": 58,
+      "stock": 20,
+      "region": "sierra",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjTApnPkxNZMNED8VslnBslKNoWAXRstCttE06OfGeI2k_CwxKa3AFtrQ&s=10",
+      "vendedor_id": 3
+    },
+    {
+      "id": 7,
+      "nombre": "Escultura de Madera",
+      "descripcion": "Escultura tallada en madera de balsa, representando animales nativos del Ecuador.",
+      "categoria": "madera",
+      "precio": 35.00,
+      "calificacion": 4.7,
+      "resenas": 81,
+      "stock": 7,
+      "region": "amazonia",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjIpLVy_86pNiBo6qBUphW9bsUhBDdfNbd9REYHp8Zew&s=10",
+      "vendedor_id": 2
+    },
+    {
+      "id": 8,
+      "nombre": "Pulsera de Metal",
+      "descripcion": "Pulsera artesanal de plata 925 con diseños geométricos incaicos. Hecho por maestros orfebres ecuatorianos.",
+      "categoria": "metal",
+      "precio": 50.00,
+      "calificacion": 4.9,
+      "resenas": 112,
+      "stock": 4,
+      "region": "sierra",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqlFO7HyY8kMUjqIswgZG2Vx_RuU9S2hfMQ2Iogz0vkw&s=10",
+      "vendedor_id": 1
+    },
+    {
+      "id": 9,
+      "nombre": "Chalina Tejida",
+      "descripcion": "Chalina de lana tejida a mano con patrones tradicionales de la serranía ecuatoriana.",
+      "categoria": "tejido",
+      "precio": 22.00,
+      "calificacion": 4.6,
+      "resenas": 95,
+      "stock": 10,
+      "region": "sierra",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZgffI5b9vrjlxJ_02L90dyoCf1GZ69PJfn8tEmR845rVqILq4u34ETOze&s=10",
+      "vendedor_id": 3
+    },
+    {
+      "id": 10,
+      "nombre": "Vasija de Barro",
+      "descripcion": "Vasija tradicional de barro cocido utilizada ancestralmente para almacenar agua.",
+      "categoria": "ceramica",
+      "precio": 60.00,
+      "calificacion": 4.8,
+      "resenas": 67,
+      "stock": 2,
+      "region": "sierra",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZt5zWVsDNtXpsvyl6lbhzy2aqS-mnJtXdiB-7D9G2WQ&s=10",
+      "vendedor_id": 2
+    },
+    {
+      "id": 11,
+      "nombre": "Collar de Metal",
+      "descripcion": "Collar artesanal con cuentas de oro laminado y piedras semipreciosas. Diseño exclusivo.",
+      "categoria": "metal",
+      "precio": 75.00,
+      "calificacion": 4.5,
+      "resenas": 48,
+      "stock": 3,
+      "region": "sierra",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-ZeMc5-hIRL_QnvQqaFwM3H_WnxNu49WGz8bN_pGtaA&s=10",
+      "vendedor_id": 1
+    },
+    {
+      "id": 12,
+      "nombre": "Tabla de Madera",
+      "descripcion": "Tabla de corte tallada en madera tropical con diseños grabados a mano.",
+      "categoria": "madera",
+      "precio": 28.00,
+      "calificacion": 4.3,
+      "resenas": 33,
+      "stock": 9,
+      "region": "amazonia",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Eyqoa6KOExhz-i_VD2qr3WENQo-5GPvleK8oIqtONA&s=10",
+      "vendedor_id": 3
+    },
+    {
+      "id": 13,
+      "nombre": "Taza de Cerámica",
+      "descripcion": "Taza de cerámica decorada con motivos prehispánicos. Cada una es única.",
+      "categoria": "ceramica",
+      "precio": 12.00,
+      "calificacion": 4.7,
+      "resenas": 156,
+      "stock": 25,
+      "region": "sierra",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThDCVZ31e04efyDmKxAqqVqtBwYkbB0NemBgHM7ArzCg&s=10",
+      "vendedor_id": 2
+    },
+    {
+      "id": 14,
+      "nombre": "Bolso Tejido",
+      "descripcion": "Bolso de mano tejido con algodón 100% y detalles de cuero genuino.",
+      "categoria": "tejido",
+      "precio": 40.00,
+      "calificacion": 4.8,
+      "resenas": 87,
+      "stock": 6,
+      "region": "sierra",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwQXuMHtSu8nAxGvnkQGbC7NOw7La9O6SsF3jysbSf8l9U2dTtgdeUC1-b&s=10",
+      "vendedor_id": 1
+    },
+    {
+      "id": 15,
+      "nombre": "Anillo de Metal",
+      "descripcion": "Anillo de plata con piedra ónix. Talla ajustable.",
+      "categoria": "metal",
+      "precio": 35.00,
+      "calificacion": 4.6,
+      "resenas": 52,
+      "stock": 8,
+      "region": "sierra",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuB2KeVz9leGqfGEa9O0eatbfV4JsxJwjQnj0BcpfAiA&s=10",
+      "vendedor_id": 3
+    }
+  ],
+  "vendedores": [
+    {
+      "id": 1,
+      "nombre": "Doña Emily",
+      "ubicacion": "Quitumbe, Pichincha",
+      "rol": "Maestra Tejedora",
+      "calificacion": 4.9,
+      "productos_activos": 8,
+      "miembro_desde": "2022-03-15",
+      "verificado": true
+    },
+    {
+      "id": 2,
+      "nombre": "Don Carlos",
+      "ubicacion": "Otavalo, Imbabura",
+      "rol": "Maestro Artesano",
+      "calificacion": 4.8,
+      "productos_activos": 15,
+      "miembro_desde": "2021-07-20",
+      "verificado": true
+    },
+    {
+      "id": 3,
+      "nombre": "Doña María",
+      "ubicacion": "Cuenca, Azuay",
+      "rol": "Maestra Alfarera",
+      "calificacion": 4.7,
+      "productos_activos": 6,
+      "miembro_desde": "2023-01-10",
+      "verificado": true
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nombres": "Keon",
+      "apellidos": "Lee",
+      "email": "keonj.lee@email.com",
+      "telefono": "0987654321",
+      "fecha_nacimiento": "2005-02-19",
+      "genero": "masculino",
+      "miembro_desde": "2026-01-01",
+      "nivel_ingles": 60,
+      "nivel_comercio": 70,
+      "verificado": true
+    }
+  ],
+  "carrito": [
+    {
+      "producto_id": 1,
+      "nombre": "Poncho Azul",
+      "precio": 30.00,
+      "cantidad": 1,
+      "imagen": "https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg",
+      "vendedor": "Doña Emily · Quitumbe"
+    },
+    {
+      "producto_id": 3,
+      "nombre": "Jarrón de Barro Negro",
+      "precio": 45.00,
+      "cantidad": 1,
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLUGeuxsPkE-k4nsj0tQOb0vVFeQlJuc9qJOi1cYM-sQ&s=10",
+      "vendedor": "Doña María · Cuenca"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1001,
+      "usuario_id": 1,
+      "producto_id": 1,
+      "nombre_producto": "Poncho Azul",
+      "precio": 30.00,
+      "cantidad": 1,
+      "fecha": "2024-01-12",
+      "estado": "entregado"
+    },
+    {
+      "id": 1002,
+      "usuario_id": 1,
+      "producto_id": 3,
+      "nombre_producto": "Jarrón de Barro Negro",
+      "precio": 45.00,
+      "cantidad": 1,
+      "fecha": "2024-02-03",
+      "estado": "en_camino"
+    }
+  ],
+  "resenas": [
+    {
+      "id": 1,
+      "producto_id": 1,
+      "usuario": "Andrea Sinmaleza",
+      "calificacion": 5,
+      "texto": "Excelente calidad de los productos. ¡Muy recomendable!",
+      "fecha": "2024-03-10"
+    },
+    {
+      "id": 2,
+      "producto_id": 1,
+      "usuario": "Anahi Correa",
+      "calificacion": 5,
+      "texto": "El producto es de excelente calidad y el servicio fue muy atento.",
+      "fecha": "2024-03-15"
+    },
+    {
+      "id": 3,
+      "producto_id": 1,
+      "usuario": "Axel Molina",
+      "calificacion": 4,
+      "texto": "El producto es tal cual como en la foto, y la calidad es excelente.",
+      "fecha": "2024-03-20"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - EcuaConect</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/registro.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <header class="auth-header">
+        <h1 class="app-titulo">EcuaConect</h1>
+        <div class="header-logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s" alt="Logo" width="100" height="100">
+        </div>
+    </header>
+
+    <main class="registro-main">
+
+        <h2>Registro de Usuario</h2>
+
+        <div class="registro-card">
+            <p class="subtitulo">Cree su Cuenta</p>
+
+            <form action="inicioSesion.html" method="post">
+
+                <div class="campo">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" id="nombres" name="nombres" placeholder="Ej. Juan Carlos" required>
+                </div>
+
+                <div class="campo">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ej. Pérez López" required>
+                </div>
+
+                <div class="campo">
+                    <label for="cedula">Cédula de Identidad</label>
+                    <input type="password" id="cedula" name="cedula" placeholder="••••••••••" required maxlength="10">
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="genero">Género</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Prefiero no decir</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="campo campo-password">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" required minlength="8" maxlength="16">
+                    <p class="hint-text">Entre 8 y 16 caracteres, con letras, números y un carácter especial.</p>
+                </div>
+
+                <div class="campo campo-password">
+                    <label for="passwordConfirm">Confirmar Contraseña</label>
+                    <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="Confirme su contraseña" required minlength="8" maxlength="16">
+                </div>
+
+                <!-- Términos y condiciones -->
+                <div class="mb-3 d-flex gap-2 align-items-start">
+                    <input type="checkbox" id="terminos" required class="mt-1" style="accent-color: var(--color-primario); width:auto; flex-shrink:0;">
+                    <label for="terminos" class="small text-muted">
+                        Acepto los <a href="#" style="color:var(--color-primario);">Términos y Condiciones</a> y la
+                        <a href="#" style="color:var(--color-primario);">Política de Privacidad</a> de EcuaConect.
+                    </label>
+                </div>
+
+                <div class="registro-acciones">
+                    <button type="submit" class="btn-registrar">
+                        <i class="fa-solid fa-user-plus me-2"></i> Crear Cuenta
+                    </button>
+                </div>
+
+                <p class="link-login">
+                    ¿Ya tienes una cuenta? <a href="inicioSesion.html">Iniciar Sesión</a>
+                </p>
+
+            </form>
+        </div>
+    </main>
+
+    <footer class="registro-footer">
+        <p><i class="fa-solid fa-copyright"></i> 2026 EcuaConect. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validacion.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+
+</html>

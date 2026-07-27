@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecuaconect>
+
+    <!-- =============================================
+         PRODUCTOS
+         Corresponden a los mostrados en catalogo.html
+         y producto.html
+    ============================================= -->
+    <productos>
+
+        <producto>
+            <id>1</id>
+            <nombre>Poncho Azul</nombre>
+            <descripcion>Poncho tejido a mano con lana de oveja, utilizando técnicas ancestrales otavaleñas. Tintes naturales de plantas andinas.</descripcion>
+            <categoria>tejido</categoria>
+            <precio>30.00</precio>
+            <calificacion>4.8</calificacion>
+            <resenas>128</resenas>
+            <stock>5</stock>
+            <region>sierra</region>
+            <imagen>https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg</imagen>
+            <vendedor_id>1</vendedor_id>
+        </producto>
+
+        <producto>
+            <id>2</id>
+            <nombre>Colibrí Azul</nombre>
+            <descripcion>Figura decorativa de madera tallada a mano, pintada con colores naturales representando el colibrí ecuatoriano.</descripcion>
+            <categoria>madera</categoria>
+            <precio>20.00</precio>
+            <calificacion>4.6</calificacion>
+            <resenas>74</resenas>
+            <stock>12</stock>
+            <region>sierra</region>
+            <imagen>https://www.pimkay.com/wp-content/uploads/2021/08/Colibri-Azul-768x960.jpg</imagen>
+            <vendedor_id>2</vendedor_id>
+        </producto>
+
+        <producto>
+            <id>3</id>
+            <nombre>Jarrón de Barro Negro</nombre>
+            <descripcion>Jarrón moldeado a mano durante 3 días con técnicas ancestrales. Color negro obtenido mediante cocción especial en hornos de leña.</descripcion>
+            <categoria>ceramica</categoria>
+            <precio>45.00</precio>
+            <calificacion>4.7</calificacion>
+            <resenas>96</resenas>
+            <stock>3</stock>
+            <region>sierra</region>
+            <imagen>https://huakaldesign.com/cdn/shop/files/1-00737_A.jpg?v=1721044660&amp;width=1920</imagen>
+            <vendedor_id>3</vendedor_id>
+        </producto>
+
+        <producto>
+            <id>4</id>
+            <nombre>Manta Tejida</nombre>
+            <descripcion>Manta elaborada en telar a mano con diseños geométricos ancestrales. 100% lana de alpaca de alta calidad.</descripcion>
+            <categoria>tejido</categoria>
+            <precio>25.00</precio>
+            <calificacion>4.9</calificacion>
+            <resenas>205</resenas>
+            <stock>8</stock>
+            <region>sierra</region>
+            <imagen>https://i.etsystatic.com/25364145/r/il/f0ce29/7382434569/il_570xN.7382434569_4dxt.jpg</imagen>
+            <vendedor_id>2</vendedor_id>
+        </producto>
+
+        <producto>
+            <id>5</id>
+            <nombre>Poncho rojo</nombre>
+            <descripcion>Manta elaborada en telar a mano con diseños geométricos ancestrales. 100% lana de alpaca de alta calidad.</descripcion>
+            <categoria>tejido</categoria>
+            <precio>25.00</precio>
+            <calificacion>4.9</calificacion>
+            <resenas>205</resenas>
+            <stock>8</stock>
+            <region>sierra</region>
+            <imagen>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3y32Y22lR1lW49IRuotLaQ-nutxtcO7zxPESR0fBn3g&s=10</imagen>
+            <vendedor_id>2</vendedor_id>
+        </producto>
+
+        <producto>
+            <id>6</id>
+            <nombre>Macetero de madera</nombre>
+            <descripcion>Manta elaborada en telar a mano con diseños geométricos ancestrales. 100% lana de alpaca de alta calidad.</descripcion>
+            <categoria>tejido</categoria>
+            <precio>25.00</precio>
+            <calificacion>4.9</calificacion>
+            <resenas>205</resenas>
+            <stock>8</stock>
+            <region>sierra</region>
+            <imagen>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgcJZWmgbv7cVCjaeX73gURgYvTwUdJEFPnCEdQC5tUrqeVHLTieNFhbw&s=10</imagen>
+            <vendedor_id>2</vendedor_id>
+        </producto>
+
+    </productos>
+
+    <!-- =============================================
+         VENDEDORES
+         Corresponden a los artesanos que aparecen
+         en producto.html y catalogo.html
+    ============================================= -->
+    <vendedores>
+
+        <vendedor>
+            <id>1</id>
+            <nombre>Doña Emily</nombre>
+            <ubicacion>Quitumbe, Pichincha</ubicacion>
+            <rol>Maestra Tejedora</rol>
+            <calificacion>4.9</calificacion>
+            <productos_activos>8</productos_activos>
+            <miembro_desde>2022-03-15</miembro_desde>
+            <verificado>true</verificado>
+        </vendedor>
+
+        <vendedor>
+            <id>2</id>
+            <nombre>Don Carlos</nombre>
+            <ubicacion>Otavalo, Imbabura</ubicacion>
+            <rol>Maestro Artesano</rol>
+            <calificacion>4.8</calificacion>
+            <productos_activos>15</productos_activos>
+            <miembro_desde>2021-07-20</miembro_desde>
+            <verificado>true</verificado>
+        </vendedor>
+
+        <vendedor>
+            <id>3</id>
+            <nombre>Doña María</nombre>
+            <ubicacion>Cuenca, Azuay</ubicacion>
+            <rol>Maestra Alfarera</rol>
+            <calificacion>4.7</calificacion>
+            <productos_activos>6</productos_activos>
+            <miembro_desde>2023-01-10</miembro_desde>
+            <verificado>true</verificado>
+        </vendedor>
+
+    </vendedores>
+
+    <!-- =============================================
+         USUARIOS
+         Corresponde a los datos mostrados en perfil.html
+    ============================================= -->
+    <usuarios>
+
+        <usuario>
+            <id>1</id>
+            <nombres>Keon</nombres>
+            <apellidos>Lee</apellidos>
+            <email>keonj.lee@email.com</email>
+            <telefono>0987654321</telefono>
+            <fecha_nacimiento>2005-02-19</fecha_nacimiento>
+            <genero>masculino</genero>
+            <miembro_desde>2026-01-01</miembro_desde>
+            <nivel_ingles>60</nivel_ingles>
+            <nivel_comercio>70</nivel_comercio>
+            <verificado>true</verificado>
+        </usuario>
+
+    </usuarios>
+
+    <!-- =============================================
+         CARRITO
+         Corresponde a los items mostrados en carrito.html
+    ============================================= -->
+    <carrito>
+
+        <item>
+            <producto_id>1</producto_id>
+            <nombre>Poncho Azul</nombre>
+            <precio>30.00</precio>
+            <cantidad>1</cantidad>
+            <imagen>https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg</imagen>
+            <vendedor>Doña Emily · Quitumbe</vendedor>
+        </item>
+
+        <item>
+            <producto_id>3</producto_id>
+            <nombre>Jarrón de Barro Negro</nombre>
+            <precio>45.00</precio>
+            <cantidad>1</cantidad>
+            <imagen>https://huakaldesign.com/cdn/shop/files/1-00737_A.jpg?v=1721044660&amp;width=1920</imagen>
+            <vendedor>Doña María · Cuenca</vendedor>
+        </item>
+
+    </carrito>
+
+    <!-- =============================================
+         PEDIDOS
+         Corresponde al historial en perfil.html
+    ============================================= -->
+    <pedidos>
+
+        <pedido>
+            <id>1001</id>
+            <usuario_id>1</usuario_id>
+            <producto_id>1</producto_id>
+            <nombre_producto>Poncho Azul</nombre_producto>
+            <precio>30.00</precio>
+            <cantidad>1</cantidad>
+            <fecha>2024-01-12</fecha>
+            <estado>entregado</estado>
+        </pedido>
+
+        <pedido>
+            <id>1002</id>
+            <usuario_id>1</usuario_id>
+            <producto_id>3</producto_id>
+            <nombre_producto>Jarrón de Barro Negro</nombre_producto>
+            <precio>45.00</precio>
+            <cantidad>1</cantidad>
+            <fecha>2024-02-03</fecha>
+            <estado>en_camino</estado>
+        </pedido>
+
+    </pedidos>
+
+    <!-- =============================================
+         RESEÑAS
+         Corresponde a las reseñas en producto.html
+    ============================================= -->
+    <resenas>
+
+        <resena>
+            <id>1</id>
+            <producto_id>1</producto_id>
+            <usuario>Andrea Sinmaleza</usuario>
+            <calificacion>5</calificacion>
+            <texto>Excelente calidad de los productos. ¡Muy recomendable!</texto>
+            <fecha>2024-03-10</fecha>
+        </resena>
+
+        <resena>
+            <id>2</id>
+            <producto_id>1</producto_id>
+            <usuario>Anahi Correa</usuario>
+            <calificacion>5</calificacion>
+            <texto>El producto es de excelente calidad y el servicio fue muy atento.</texto>
+            <fecha>2024-03-15</fecha>
+        </resena>
+
+        <resena>
+            <id>3</id>
+            <producto_id>1</producto_id>
+            <usuario>Axel Molina</usuario>
+            <calificacion>4</calificacion>
+            <texto>El producto es tal cual como en la foto, y la calidad es excelente.</texto>
+            <fecha>2024-03-20</fecha>
+        </resena>
+
+    </resenas>
+
+</ecuaconect>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcuaConect</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s"
+        type="image/x-icon">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS Propios -->
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/principal.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR Bootstrap personalizado -->
+    <nav class="navbar navbar-expand-lg navbar-ecuaconect">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand fw-bold fs-4" href="principal.html">
+                <i class="fa-solid fa-leaf me-1"></i> EcuaConect
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="principal.html"><i class="fa-solid fa-house me-1"></i>
+                            Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html"><i class="fa-solid fa-list me-1"></i> Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html"><i class="fa-solid fa-shopping-cart me-1"></i> Carrito
+                            <span class="badge badge-ecuaconect ms-1">2</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="perfil.html"><i class="fa-solid fa-user me-1"></i> Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="inicioSesion.html"><i class="fa-solid fa-right-to-bracket me-1"></i>
+                            Ingresar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navegación móvil inferior -->
+    <nav class="bottom-nav d-lg-none">
+        <a href="principal.html" class="activo"><i class="fa-solid fa-house" title="Home"></i></a>
+        <a href="catalogo.html"><i class="fa-solid fa-list" title="Catálogo"></i></a>
+        <a href="carrito.html"><i class="fa-solid fa-shopping-cart" title="Carrito"></i></a>
+        <a href="perfil.html"><i class="fa-solid fa-user" title="Perfil"></i></a>
+    </nav>
+
+    <main class="app-main">
+
+        <!-- ALERT Bootstrap -->
+        <div class="alert alert-ecuaconect alert-dismissible fade show mb-3" role="alert">
+            <i class="fa-solid fa-tag me-2"></i>
+            <strong>¡Oferta especial!</strong> 10% de descuento en tu primera compra usando el código
+            <strong>ECUA10</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+
+        <!-- CARRUSEL Bootstrap -->
+        <div id="carruselPrincipal" class="carousel slide mb-4 rounded-4 overflow-hidden shadow-sm"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carruselPrincipal" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://conartesanos.com/wp-content/uploads/2020/07/1-1.jpg"
+                        class="d-block w-100 carousel-img" alt="Artesanías Ecuador">
+                    <div class="carousel-caption d-none d-sm-block">
+                        <h5>Artesanías Únicas</h5>
+                        <p>Hechas a mano por maestros del Ecuador</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg"
+                        class="d-block w-100 carousel-img" alt="Ponchos">
+                    <div class="carousel-caption d-none d-sm-block">
+                        <h5>Ponchos y Tejidos</h5>
+                        <p>Tradición otavaleña en cada hilo</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://huakaldesign.com/cdn/shop/files/1-00737_A.jpg?v=1721044660&width=1920"
+                        class="d-block w-100 carousel-img" alt="Cerámica">
+                    <div class="carousel-caption d-none d-sm-block">
+                        <h5>Cerámica Artesanal</h5>
+                        <p>Técnicas ancestrales de la Sierra</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselPrincipal"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselPrincipal"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- Bienvenida -->
+        <div class="bienvenida card mb-3">
+            <div class="text-center">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdiNGdg7AXxwoabv2VXD59iZly1WVa2J6XXg&s"
+                    alt="Logo" class="logo mb-3">
+                <p class="titulo-bienvenida">¡Bienvenido a EcuaConect!</p>
+                <p class="subtitulo-bienvenida">Descubre artesanías únicas hechas a mano por maestros artesanos del
+                    Ecuador.</p>
+                <div class="d-flex gap-2 justify-content-center flex-wrap mt-3">
+                    <span class="badge badge-ecuaconect fs-6 px-3 py-2"><i class="fa-solid fa-check me-1"></i> 100%
+                        Auténtico</span>
+                    <span class="badge bg-secondary fs-6 px-3 py-2"><i class="fa-solid fa-truck me-1"></i> Envío
+                        Nacional</span>
+                    <span class="badge bg-success fs-6 px-3 py-2"><i class="fa-solid fa-shield me-1"></i> Compra
+                        Segura</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORMULARIO DE BÚSQUEDA -->
+        <div class="form-busqueda card mb-3">
+            <p class="card-subtitulo">Buscar Artesanías</p>
+            <form action="catalogo.html" method="get">
+                <div class="mb-3">
+                    <h6 class="text-muted mb-2">Categoría</h6>
+                    <div class="categorias-flex">
+                        <label for="ceramica" class="categoria-chip">
+                            <input type="checkbox" id="ceramica" name="intereses[]" value="ceramica">
+                            <i class="fa-solid fa-mug-saucer"></i> Cerámica
+                        </label>
+                        <label for="madera" class="categoria-chip">
+                            <input type="checkbox" id="madera" name="intereses[]" value="madera">
+                            <i class="fa-solid fa-tree"></i> Madera
+                        </label>
+                        <label for="tejido" class="categoria-chip">
+                            <input type="checkbox" id="tejido" name="intereses[]" value="tejido">
+                            <i class="fa-solid fa-socks"></i> Tejido
+                        </label>
+                        <label for="metal" class="categoria-chip">
+                            <input type="checkbox" id="metal" name="intereses[]" value="metal">
+                            <i class="fa-solid fa-gear"></i> Metal
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <h6 class="text-muted mb-2">Región</h6>
+                    <select id="region" name="region" class="form-select">
+                        <option value="">Seleccione una región</option>
+                        <option value="costa">Costa</option>
+                        <option value="sierra">Sierra</option>
+                        <option value="oriente">Oriente</option>
+                        <option value="insular">Insular</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-warning w-100 fw-bold">
+                    <i class="fa-solid fa-magnifying-glass me-2"></i>Buscar
+                </button>
+            </form>
+        </div>
+
+        <!-- PRODUCTOS DESTACADOS con Cards Bootstrap -->
+        <div class="card mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <p class="card-subtitulo mb-0">Productos Destacados</p>
+                <a href="catalogo.html" class="link-ver-todos">Ver todos <i
+                        class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+
+            <!-- Grid Bootstrap para cards de producto -->
+            <div class="row g-3 d-none d-md-flex">
+                <div class="col-md-4">
+                    <div class="card card-producto h-100">
+                        <img src="https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg"
+                            class="card-img-top" alt="Poncho Azul">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-1 fw-bold">Poncho Azul</h6>
+                            <p class="text-muted small mb-1">Doña Rosa · Otavalo</p>
+                            <p class="text-warning small mb-1">★★★★★ 4.8</p>
+                            <p class="fw-bold" style="color: var(--color-primario);">$30</p>
+                            <a href="producto.html" class="btn btn-sm btn-warning w-100 fw-bold">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-producto h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLUGeuxsPkE-k4nsj0tQOb0vVFeQlJuc9qJOi1cYM-sQ&s=10"
+                            class="card-img-top" alt="Jarrón de Barro">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-1 fw-bold">Jarrón de Barro</h6>
+                            <p class="text-muted small mb-1">Doña Rosa · Quitumbe</p>
+                            <p class="text-warning small mb-1">★★★★☆ 4.6</p>
+                            <p class="fw-bold" style="color: var(--color-primario);">$45</p>
+                            <a href="producto.html" class="btn btn-sm btn-warning w-100 fw-bold">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-producto h-100">
+                        <img src="https://i.etsystatic.com/25364145/r/il/f0ce29/7382434569/il_570xN.7382434569_4dxt.jpg"
+                            class="card-img-top" alt="Manta Tejida">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-1 fw-bold">Manta Tejida</h6>
+                            <p class="text-muted small mb-1">Don Carlos · Otavalo</p>
+                            <p class="text-warning small mb-1">★★★★★ 4.9</p>
+                            <p class="fw-bold" style="color: var(--color-primario);">$25</p>
+                            <a href="producto.html" class="btn btn-sm btn-warning w-100 fw-bold">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista móvil -->
+            <div class="d-md-none">
+                <div class="producto-item">
+                    <img src="https://www.pimkay.com/wp-content/uploads/2022/02/Capa-de-Macana-Azul-1.jpg"
+                        alt="Poncho Azul">
+                    <div class="info">
+                        <p class="nombre">Poncho Azul</p>
+                        <p class="vendedor">Doña Rosa · Quitumbe</p>
+                        <p class="calificacion">Calificación 4,8 ⭐</p>
+                    </div>
+                    <p class="precio">$30</p>
+                </div>
+                <div class="producto-item">
+                    <img src="https://huakaldesign.com/cdn/shop/files/1-00737_A.jpg?v=1721044660&width=1920"
+                        alt="Jarrón">
+                    <div class="info">
+                        <p class="nombre">Jarrón de Barro</p>
+                        <p class="vendedor">Doña Rosa · Quitumbe</p>
+                        <p class="calificacion">Calificación 4,6 ⭐</p>
+                    </div>
+                    <p class="precio">$45</p>
+                </div>
+                <div class="producto-item">
+                    <img src="https://i.etsystatic.com/25364145/r/il/f0ce29/7382434569/il_570xN.7382434569_4dxt.jpg"
+                        alt="Manta">
+                    <div class="info">
+                        <p class="nombre">Manta Tejida</p>
+                        <p class="vendedor">Don Carlos · Otavalo</p>
+                        <p class="calificacion">Calificación 4,9 ⭐</p>
+                    </div>
+                    <p class="precio">$25</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACCORDION Bootstrap para FAQ -->
+        <div class="card mb-3">
+            <p class="card-subtitulo">Preguntas Frecuentes</p>
+
+            <div class="accordion accordion-flush" id="accordionFAQ">
+                <div class="accordion-item" style="border-radius:8px; margin-bottom:8px; overflow:hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1">
+                            <i class="fa-solid fa-circle-info me-2" style="color: var(--color-primario);"></i>
+                            ¿Quiénes somos?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            EcuaConect es una plataforma dedicada a conectar a los amantes de las artesanías con los
+                            talentosos artesanos del Ecuador. Nuestra misión es promover y preservar la rica tradición
+                            artesanal del país.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="border-radius:8px; margin-bottom:8px; overflow:hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+                            <i class="fa-solid fa-bag-shopping me-2" style="color: var(--color-primario);"></i>
+                            ¿Cómo comprar?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            Navega por nuestro catálogo, selecciona los artículos que te interesen y agrégalos a tu
+                            carrito. Luego sigue el proceso de pago seguro. ¡Es fácil y conveniente!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="border-radius:8px; overflow:hidden;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+                            <i class="fa-solid fa-store me-2" style="color: var(--color-primario);"></i>
+                            ¿Cómo vender?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+                        <div class="accordion-body text-muted">
+                            Si eres artesano, regístrate como vendedor, completa el formulario y comienza a subir tus
+                            productos para que los clientes puedan descubrir tus creaciones.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL Bootstrap — Más información -->
+        <div class="text-center mb-3">
+            <button type="button" class="btn btn-warning fw-bold px-4" data-bs-toggle="modal"
+                data-bs-target="#modalInfo">
+                <i class="fa-solid fa-info-circle me-2"></i> Conoce más sobre EcuaConect
+            </button>
+        </div>
+
+    </main>
+
+    <!-- MODAL Bootstrap -->
+    <div class="modal fade" id="modalInfo" tabindex="-1" aria-labelledby="modalInfoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 16px;">
+                <div class="modal-header"
+                    style="background-color: var(--color-secundario); border-radius: 16px 16px 0 0;">
+                    <h5 class="modal-title text-white fw-bold" id="modalInfoLabel">
+                        <i class="fa-solid fa-leaf me-2"></i> EcuaConect
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>EcuaConect es la plataforma que conecta a compradores nacionales e internacionales con los
+                        mejores artesanos del Ecuador.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fa-solid fa-check text-success me-2"></i> Productos 100%
+                            auténticos</li>
+                        <li class="list-group-item"><i class="fa-solid fa-check text-success me-2"></i> Apoyo a
+                            artesanos locales</li>
+                        <li class="list-group-item"><i class="fa-solid fa-check text-success me-2"></i> Envíos a todo el
+                            Ecuador</li>
+                        <li class="list-group-item"><i class="fa-solid fa-check text-success me-2"></i> Pago seguro
+                            garantizado</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="catalogo.html" class="btn btn-warning fw-bold">Ver Catálogo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><i class="fa-solid fa-copyright"></i> 2026 EcuaConect. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

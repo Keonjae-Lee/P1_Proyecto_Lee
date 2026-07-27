@@ -1,0 +1,388 @@
+/*
+======================================
+general.css
+Estilos base comunes para todo el sitio
+Mobile-first approach
+======================================
+*/
+
+/* ============================================================
+   RESET Y BOX MODEL
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ============================================================
+   VARIABLES CSS
+   ============================================================ */
+
+:root {
+    --color-primario: #c0622a;
+    --color-primario-oscuro: #a0501f;
+    --color-secundario: rgb(231, 156, 51);
+    --color-fondo: rgb(245, 240, 232);
+    --color-blanco: #ffffff;
+    --color-gris-claro: #f5f5f5;
+    --color-texto-suave: #777;
+    --color-texto-muy-suave: #aaa;
+    --color-borde: #ddd;
+    --sombra-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --radio-borde: 10px;
+    --transicion: 0.3s ease;
+}
+
+/* ============================================================
+   BODY
+   ============================================================ */
+
+body {
+    background-color: var(--color-fondo);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+/* ============================================================
+   TIPOGRAFÍA
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial Black', Arial, sans-serif;
+}
+
+/* ============================================================
+   TÍTULO DE LA APP (header bar)
+   ============================================================ */
+
+.app-titulo {
+    background-color: var(--color-secundario);
+    font-family: 'Arial Black', Arial, sans-serif;
+    padding: 12px 20px 15px;
+    color: var(--color-blanco);
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(231, 156, 51, 0.3);
+}
+
+/* ============================================================
+   NAVEGACIÓN INFERIOR — Flexbox
+   ============================================================ */
+
+.bottom-nav {
+    background-color: var(--color-blanco);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid var(--color-borde);
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #555;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: color var(--transicion), background-color var(--transicion);
+}
+
+.bottom-nav a:hover,
+.bottom-nav a.activo {
+    color: var(--color-primario);
+    background-color: rgba(192, 98, 42, 0.08);
+    text-decoration: none;
+}
+
+/* ============================================================
+   MAIN — Contenedor principal
+   ============================================================ */
+
+.app-main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 16px 100px;
+}
+
+.app-main h2 {
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+/* ============================================================
+   TARJETA GENÉRICA — Box Model
+   ============================================================ */
+
+.card {
+    background-color: var(--color-blanco);
+    border-radius: var(--radio-borde);
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #eeeeee;
+    box-shadow: var(--sombra-card);
+    transition: box-shadow var(--transicion);
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-subtitulo {
+    font-size: 0.75rem;
+    color: var(--color-texto-suave);
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+/* ============================================================
+   SECCIÓN GENÉRICA
+   ============================================================ */
+
+section {
+    padding: 16px;
+    margin-bottom: 18px;
+    border: 1px solid #dddddd;
+    border-radius: var(--radio-borde);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+    background-color: rgb(253, 234, 207);
+    text-align: center;
+    padding: 20px 0 80px;
+    color: #989898;
+    font-size: 0.9rem;
+    border-top: 1px solid #e8d5b5;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+
+/* ============================================================
+   BOTONES GENERALES — Transiciones
+   ============================================================ */
+
+.btn-primario {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: var(--radio-borde);
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color var(--transicion), transform var(--transicion), box-shadow var(--transicion);
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primario:hover {
+    background-color: var(--color-primario-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(192, 98, 42, 0.35);
+    color: var(--color-blanco);
+}
+
+.btn-outline-primario {
+    background-color: transparent;
+    color: var(--color-primario);
+    border: 2px solid var(--color-primario);
+    border-radius: var(--radio-borde);
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color var(--transicion), color var(--transicion), transform var(--transicion);
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-outline-primario:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   IMÁGENES
+   ============================================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================================
+   OVERRIDES DE BOOTSTRAP — Personalización
+   ============================================================ */
+
+.btn-warning {
+    background-color: var(--color-secundario) !important;
+    border-color: var(--color-secundario) !important;
+    color: white !important;
+    transition: background-color var(--transicion), transform var(--transicion) !important;
+}
+
+.btn-warning:hover {
+    background-color: #c8860a !important;
+    transform: translateY(-2px) !important;
+}
+
+.navbar-ecuaconect {
+    background-color: var(--color-secundario) !important;
+    box-shadow: 0 4px 12px rgba(231, 156, 51, 0.3);
+}
+
+.navbar-ecuaconect .navbar-brand,
+.navbar-ecuaconect .nav-link {
+    color: white !important;
+    font-weight: bold;
+    transition: color var(--transicion);
+}
+
+.navbar-ecuaconect .nav-link:hover {
+    color: rgba(255,255,255,0.75) !important;
+}
+
+.navbar-ecuaconect .navbar-toggler {
+    border-color: rgba(255,255,255,0.5);
+}
+
+.navbar-ecuaconect .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Bootstrap card override */
+.card-producto {
+    border: none !important;
+    box-shadow: var(--sombra-card);
+    border-radius: 12px !important;
+    transition: transform var(--transicion), box-shadow var(--transicion) !important;
+    overflow: hidden;
+}
+
+.card-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-producto .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Badge personalizado */
+.badge-ecuaconect {
+    background-color: var(--color-primario) !important;
+}
+
+/* Alert personalizado */
+.alert-ecuaconect {
+    background-color: rgba(192, 98, 42, 0.1);
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+    border-radius: var(--radio-borde);
+}
+
+/* Accordion personalizado */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(192, 98, 42, 0.1) !important;
+    color: var(--color-primario) !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(192, 98, 42, 0.25) !important;
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile First
+   Tableta: 768px+
+   Escritorio: 992px+
+   ============================================================ */
+
+/* === MÓVIL (base, sin media query) === */
+.app-main {
+    padding: 16px 12px 100px;
+}
+
+.app-titulo {
+    font-size: 1.3rem;
+}
+
+/* === TABLETA === */
+@media (min-width: 768px) {
+    .app-main {
+        max-width: 720px;
+        padding: 24px 24px 100px;
+    }
+
+    .app-titulo {
+        font-size: 1.6rem;
+        padding: 14px 24px 18px;
+    }
+
+    .bottom-nav a {
+        font-size: 1.3rem;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 20px 0 40px;
+    }
+}
+
+/* === ESCRITORIO === */
+@media (min-width: 992px) {
+    .app-main {
+        max-width: 900px;
+        padding: 30px 30px 80px;
+    }
+
+    .app-titulo {
+        font-size: 1.8rem;
+    }
+
+    .bottom-nav {
+        max-width: 900px;
+        margin: 0 auto;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        position: sticky;
+        border-radius: 0 0 20px 20px;
+    }
+
+    footer {
+        padding: 20px 0 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
